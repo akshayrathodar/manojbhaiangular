@@ -1,0 +1,75 @@
+<div class="page-header">
+  <h3 class="page-title">
+    Multi Step Login
+  </h3>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="javascript:;">User pages</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Multi step login</li>
+    </ol>
+  </nav>
+</div>
+<div class="row"> 
+  <div class="col-md-10 col-lg-6 mx-auto grid-margin"> 
+    <div class="card">
+      <div class="card-body">
+          <h4 class="text-center">Create your account</h4>
+        <form-wizard class="form-wizard">
+          <wizard-step [title]="'1. Login Details'">
+            <section class="content">
+              <div class="form-group">
+                <input class="form-control" type="text" name="username" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="password" name="pass" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="password" name="cpass" placeholder="Confirm Password">
+              </div>
+            </section>
+          </wizard-step>
+          <wizard-step [title]="'2. User Profile'">
+            <section class="content">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <input class="form-control" type="text" name="FirstName" placeholder="First Name">
+                </div>
+                <div class="form-group col-md-6">
+                  <input class="form-control" type="text" name="Last Name" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <input class="form-control" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group col-md-6">
+                  <input class="form-control" type="text" name="Country" placeholder="Country">
+                </div>
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="number" name="Number" placeholder="Number">
+              </div>
+            </section>
+          </wizard-step>
+          <wizard-step [title]="'3. Finish'" (onComplete)="onComplete($event)">
+            <div [ngSwitch]="isCompleted">
+              <div *ngSwitchDefault>
+                <section class="content text-center">
+                  <p class="font-weight-bold">Created sucessfully</p>
+                  <i class="mdi mdi-shield-check text-warning icon-lg"></i>
+                  <h4 class="font-weight-bold">Welcome victoryui</h4>
+                  <p class="mb-0 text-muted">You’ve successfully created a account for this user.</p>
+                </section>
+              </div>
+              <div *ngSwitchCase="true">
+                <section class="content">
+                  <h4>Thank you! You have completed all the steps.</h4>
+                </section>
+              </div>
+            </div>
+          </wizard-step>
+        </form-wizard>
+      </div>
+    </div>
+  </div>
+</div>

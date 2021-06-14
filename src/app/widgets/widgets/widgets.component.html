@@ -1,0 +1,742 @@
+<div class="page-header">
+  <h3 class="page-title">
+    Widgets
+  </h3>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="javascript:;">Widgets</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Widgets</li>
+    </ol>
+  </nav>
+</div> 
+<div class="row">
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
+    <div class="card card-statistics">
+      <div class="card-body">
+        <div class="clearfix">
+          <div class="float-left">
+            <i class="mdi mdi-cube text-danger icon-lg"></i>
+          </div>
+          <div class="float-right">
+            <p class="mb-0 text-right text-dark">Total Revenue</p>
+            <div class="fluid-container">
+              <h3 class="font-weight-medium text-right mb-0 text-dark">$6,560</h3>
+            </div>
+          </div>
+        </div>
+        <p class="text-muted mt-3 mb-0">
+          <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> 65% lower growth </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
+    <div class="card card-statistics">
+      <div class="card-body">
+        <div class="clearfix">
+          <div class="float-left">
+            <i class="mdi mdi-receipt text-warning icon-lg"></i>
+          </div>
+          <div class="float-right">
+            <p class="mb-0 text-right text-dark">Orders</p>
+            <div class="fluid-container">
+              <h3 class="font-weight-medium text-right mb-0 text-dark">3455</h3>
+            </div>
+          </div>
+        </div>
+        <p class="text-muted mt-3 mb-0">
+          <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i> Product-wise sales </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
+    <div class="card card-statistics">
+      <div class="card-body">
+        <div class="clearfix">
+          <div class="float-left">
+            <i class="mdi mdi-poll-box text-success icon-lg"></i>
+          </div>
+          <div class="float-right">
+            <p class="mb-0 text-right text-dark">Sales</p>
+            <div class="fluid-container">
+              <h3 class="font-weight-medium text-right mb-0 text-dark">5693</h3>
+            </div>
+          </div>
+        </div>
+        <p class="text-muted mt-3 mb-0">
+          <i class="mdi mdi-calendar mr-1" aria-hidden="true"></i> Weekly Sales </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
+    <div class="card card-statistics">
+      <div class="card-body">
+        <div class="clearfix">
+          <div class="float-left">
+            <i class="mdi mdi-account-box-multiple text-info icon-lg"></i>
+          </div>
+          <div class="float-right">
+            <p class="mb-0 text-right text-dark">Employees</p>
+            <div class="fluid-container">
+              <h3 class="font-weight-medium text-right mb-0 text-dark">246</h3>
+            </div>
+          </div>
+        </div>
+        <p class="text-muted mt-3 mb-0">
+          <i class="mdi mdi-reload mr-1" aria-hidden="true"></i> Product-wise sales </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
+    <div class="card card-statistics">
+      <div class="card-body pb-0">
+        <p class="text-dark">Total Invoice</p>
+        <div class="d-flex align-items-center">
+          <h4 class="font-weight-semibold text-dark">$65,650</h4>
+          <h6 class="text-success font-weight-semibold ml-2">+876</h6>
+        </div>
+        <small class="text-muted">This has been a great update.</small>
+      </div>
+      <canvas baseChart [chartType]="'line'" height="40" [datasets]="statisticsGraph1Data" [labels]="statisticsGraph1Labels" [options]="statisticsGraph1Options" [colors]="statisticsGraph1Colors"></canvas>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
+    <div class="card card-statistics">
+      <div class="card-body pb-0">
+        <p class="text-dark">Total expenses</p>
+        <div class="d-flex align-items-center">
+          <h4 class="font-weight-semibold text-dark">$65,650</h4>
+          <h6 class="text-danger font-weight-semibold ml-2">-43</h6>
+        </div>
+        <small class="text-muted">view statement</small>
+      </div>
+      <canvas baseChart [chartType]="'line'" height="40" [datasets]="statisticsGraph2Data" [labels]="statisticsGraph2Labels" [options]="statisticsGraph2Options" [colors]="statisticsGraph2Colors"></canvas>
+
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
+    <div class="card card-statistics">
+      <div class="card-body pb-0">
+        <p class="text-dark">Unpaid Invoices</p>
+        <div class="d-flex align-items-center">
+          <h4 class="font-weight-semibold text-dark">$2,542</h4>
+          <h6 class="text-success font-weight-semibold ml-2">+876</h6>
+        </div>
+        <small class="text-muted">view history</small>
+      </div>
+      <canvas baseChart [chartType]="'line'" height="40" [datasets]="statisticsGraph3Data" [labels]="statisticsGraph3Labels" [options]="statisticsGraph3Options" [colors]="statisticsGraph3Colors"></canvas>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
+    <div class="card card-statistics">
+      <div class="card-body pb-0">
+        <p class="text-dark">Amount Due</p>
+        <div class="d-flex align-items-center">
+          <h4 class="font-weight-semibold text-dark">$3450</h4>
+          <h6 class="text-success font-weight-semibold ml-2">+23</h6>
+        </div>
+        <small class="text-muted">65% lower growth</small>
+      </div>
+      <canvas baseChart [chartType]="'line'" height="40" [datasets]="statisticsGraph4Data" [labels]="statisticsGraph4Labels" [options]="statisticsGraph4Options" [colors]="statisticsGraph4Colors"></canvas>
+    </div>
+  </div>
+  <div class="col-12 grid-margin">
+    <div class="card card-statistics">
+      <div class="row">
+        <div class="card-col col-xl-3 col-lg-3 col-md-3 col-6">
+          <div class="card-body">
+            <div class="d-xl-flex align-items-center justify-content-center flex-column flex-sm-row">
+              <i class="mdi mdi-account-multiple-outline text-primary mr-0 mr-sm-4 icon-lg"></i>
+              <div class="wrapper text-center text-sm-left">
+                <p class="card-text mb-0 text-dark">New Users</p>
+                <div class="fluid-container">
+                  <h3 class="mb-0 font-weight-medium text-dark">65,650</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-col col-xl-3 col-lg-3 col-md-3 col-6">
+          <div class="card-body">
+            <div class="d-xl-flex align-items-center justify-content-center flex-column flex-sm-row">
+              <i class="mdi mdi-checkbox-marked-circle-outline text-primary mr-0 mr-sm-4 icon-lg"></i>
+              <div class="wrapper text-center text-sm-left">
+                <p class="card-text mb-0 text-dark">New Feedbacks</p>
+                <div class="fluid-container">
+                  <h3 class="mb-0 font-weight-medium text-dark">32,604</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-col col-xl-3 col-lg-3 col-md-3 col-6">
+          <div class="card-body">
+            <div class="d-xl-flex align-items-center justify-content-center flex-column flex-sm-row">
+              <i class="mdi mdi-trophy-outline text-primary mr-0 mr-sm-4 icon-lg"></i>
+              <div class="wrapper text-center text-sm-left">
+                <p class="card-text mb-0 text-dark">Employees</p>
+                <div class="fluid-container">
+                  <h3 class="mb-0 font-weight-medium text-dark">17,583</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-col col-xl-3 col-lg-3 col-md-3 col-6">
+          <div class="card-body">
+            <div class="d-xl-flex align-items-center justify-content-center flex-column flex-sm-row">
+              <i class="mdi mdi-target text-primary mr-0 mr-sm-4 icon-lg"></i>
+              <div class="wrapper text-center text-sm-left">
+                <p class="card-text mb-0 text-dark">Total Sales</p>
+                <div class="fluid-container">
+                  <h3 class="mb-0 font-weight-medium text-dark">61,119</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-6 col-lg-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-5 d-flex align-items-center"> 
+            <canvas baseChart [chartType]="'doughnut'" height="200" [datasets]="activeUsersData" [labels]="activeUsersLabels" [options]="activeUsersOptions" [colors]="activeUsersColors"></canvas>
+
+          </div>
+          <div class="col-md-7">
+            <h4 class="card-title font-weight-medium mb-0 d-none d-md-block">Active Users</h4>
+            <div class="wrapper mt-4">
+              <div class="d-flex justify-content-between mb-2">
+                <div class="d-flex align-items-center">
+                  <p class="mb-0 font-weight-medium">67,550</p>
+                  <small class="text-muted ml-2">Email account</small>
+                </div>
+                <p class="mb-0 font-weight-medium">80%</p>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="wrapper mt-4">
+              <div class="d-flex justify-content-between mb-2">
+                <div class="d-flex align-items-center">
+                  <p class="mb-0 font-weight-medium">21,435</p>
+                  <small class="text-muted ml-2">Requests</small>
+                </div>
+                <p class="mb-0 font-weight-medium">34%</p>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 34%" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-6 col-lg-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-7">
+            <h4 class="card-title font-weight-medium mb-3">Amount Due</h4>
+            <h1 class="font-weight-medium mb-0 text-dark">$5998</h1>
+            <p class="text-muted">Milestone Completed</p>
+            <p class="mb-0">Payment for next week</p>
+          </div>
+          <div class="col-md-5 d-flex align-items-end mt-4 mt-md-0">
+            <canvas baseChart [chartType]="'bar'" [datasets]="amoutDueData" height="150" [labels]="amoutDueLabels" [options]="amoutDueOptions" [colors]="amoutDueColors"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-xl-flex flex-row">
+          <img src="https://via.placeholder.com/86x86" class="img-lg rounded" alt="profile image" />
+          <div class="ml-0 ml-xl-3 mt-2 mt-xl-0">
+            <h6 class="text-dark">Maria</h6>
+            <p class="text-muted">maria@gmail.com</p>
+            <p class="mt-2 text-success font-weight-bold">Designer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-xl-flex flex-row">
+          <img src="https://via.placeholder.com/86x86" class="img-lg rounded" alt="profile image" />
+          <div class="ml-0 ml-xl-3 mt-2 mt-xl-0">
+            <h6 class="text-dark">Thomas Edison</h6>
+            <p class="text-muted">thomas@gmail.com</p>
+            <p class="mt-2 text-success font-weight-bold">Developer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-xl-flex flex-row">
+          <img src="https://via.placeholder.com/86x86" class="img-lg rounded" alt="profile image" />
+          <div class="ml-0 ml-xl-3 mt-2 mt-xl-0">
+            <h6 class="text-dark">Edward</h6>
+            <p class="text-muted">edward@gmail.com</p>
+            <p class="mt-2 text-success font-weight-bold">Tester</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="card images">
+      <div class="card-body pb-0">
+        <p class="text-muted">RAGNAROCK- Museet for pop, Roskilde, Denmark</p>
+        <h5>It’s good to start or finish the day with delicious pancakes :)</h5>
+        <div class="d-flex align-items-center justify-content-between text-muted border-top py-3 mt-3">
+          <p class="mb-0">Published on May 23, 2018</p>
+          <div class="wrapper d-flex align-items-center">
+            <small class="mr-2">93</small>
+            <i class="mdi mdi-heart-outline"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="card images">
+      <div class="card-body pb-0">
+        <p class="text-muted">RAGNAROCK- Museet for pop, Roskilde, Denmark</p>
+        <h5>It’s good to start or finish the day with delicious pancakes :)</h5>
+        <div class="d-flex align-items-center justify-content-between text-muted border-top py-3 mt-3">
+          <p class="mb-0">Published on May 23, 2018</p>
+          <div class="wrapper d-flex align-items-center">
+            <small class="mr-2">93</small>
+            <i class="mdi mdi-heart-outline"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="card images">
+      <div class="card-body pb-0">
+        <p class="text-muted">RAGNAROCK- Museet for pop, Roskilde, Denmark</p>
+        <h5>It’s good to start or finish the day with delicious pancakes :)</h5>
+        <div class="d-flex align-items-center justify-content-between text-muted border-top py-3 mt-3">
+          <p class="mb-0">Published on May 23, 2018</p>
+          <div class="wrapper d-flex align-items-center">
+            <small class="mr-2">93</small>
+            <i class="mdi mdi-heart-outline"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card aligner-wrapper">
+      <div class="card-body">
+        <div class="absolute left top bottom h-100 v-strock-2 bg-success"></div>
+        <p class="mb-2 text-dark">Unpaid Invoices</p>
+        <div class="d-xl-flex align-items-center">
+          <h1 class="font-weight-medium mb-2 text-dark">$2,156</h1>
+          <h5 class="font-weight-medium text-success ml-2">−14.2%</h5>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="bg-success dot-indicator"></div>
+          <p class="text-muted mb-0 ml-2">This month unpaid invoices $567</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card aligner-wrapper">
+      <div class="card-body">
+        <div class="absolute left top bottom h-100 v-strock-2 bg-primary"></div>
+        <p class="mb-2 text-dark">Gross volume</p>
+        <div class="d-xl-flex align-items-center">
+          <h1 class="font-weight-medium mb-2 text-dark">$1,520</h1>
+          <h5 class="font-weight-medium text-success ml-2">+20.7%</h5>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="bg-primary dot-indicator"></div>
+          <p class="text-muted mb-0 ml-2">Next payout -23 aug- $233</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card aligner-wrapper">
+      <div class="card-body">
+        <div class="absolute left top bottom h-100 v-strock-2 bg-danger"></div>
+        <p class="text-dark mb-2">Average revenue</p>
+        <div class="d-xl-flex align-items-center">
+          <h1 class="font-weight-medium mb-2 text-dark">$6.60</h1>
+          <h5 class="font-weight-medium text-success ml-2">+296.6%</h5>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="bg-danger dot-indicator"></div>
+          <p class="text-muted mb-0 ml-2">Payout for next week $100 </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-7 col-lg-7 col-md-6 col-sm-12 grid-margin stretch-card">
+    <div class="card review-card">
+      <div class="card-header header-sm d-flex justify-content-between align-items-center">
+        <h4 class="card-title mb-0">Reviews</h4>
+        <div class="wrapper d-flex align-items-center">
+          <p class="mb-0">23 New Reviews</p>
+          <div class="dropdown" ngbDropdown>
+            <button class="btn btn-transparent icon-btn dropdown-toggle arrow-disabled pr-0" type="button" id="dropdownMenuIconButton1" ngbDropdownToggle>
+              <i class="mdi mdi-dots-vertical"></i>
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownMenuIconButton1">
+              <a class="dropdown-item" href="#">Today</a>
+              <a class="dropdown-item" href="#">Yesterday</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body no-gutter">
+        <div class="list-item">
+          <div class="preview-image">
+            <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="profile image">
+          </div>
+          <div class="content">
+            <div class="d-lg-flex align-items-center">
+              <h6 class="product-name text-dark">Air Pod</h6>
+              <small class="time ml-3 d-none d-sm-block">08.34 AM</small>
+              <div class="ml-auto">
+                <bar-rating [(rate)]="rating1" [max]="5" [theme]="'fontawesome'"></bar-rating>
+              </div>
+            </div>
+            <div class="d-lg-flex align-items-center">
+              <p class="user-name text-dark">Christine :</p>
+              <p class="review-text d-block">The brand apple is original !</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="preview-image">
+            <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="profile image">
+          </div>
+          <div class="content">
+            <div class="d-lg-flex align-items-center">
+              <h6 class="product-name text-dark">Macbook</h6>
+              <small class="time ml-3 d-none d-sm-block">12.56 PM</small>
+              <div class="ml-auto">
+                <bar-rating [(rate)]="rating2" [max]="5" [theme]="'fontawesome'"></bar-rating>
+              </div>
+            </div>
+            <div class="d-lg-flex align-items-center">
+              <p class="user-name text-dark">Arthur Cole :</p>
+              <p class="review-text d-block">The brand apple is original also the iphone x.</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="preview-image">
+            <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="profile image">
+          </div>
+          <div class="content">
+            <div class="d-lg-flex align-items-center">
+              <h6 class="product-name text-dark">Apple watch</h6>
+              <small class="time ml-3 d-none d-sm-block">09.24 AM</small>
+              <div class="ml-auto">
+                <bar-rating [(rate)]="rating3" [max]="5" [theme]="'fontawesome'"></bar-rating>
+              </div>
+            </div>
+            <div class="d-lg-flex align-items-center">
+              <p class="user-name text-dark">James Tate :</p>
+              <p class="review-text d-block">The brand apple is original.</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="preview-image">
+            <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="profile image">
+          </div>
+          <div class="content">
+            <div class="d-lg-flex align-items-center">
+              <h6 class="product-name text-dark">Homepod</h6>
+              <small class="time ml-3 d-none d-sm-block">5.12 AM</small>
+              <div class="ml-auto">
+                <bar-rating [(rate)]="rating4" [max]="5" [theme]="'fontawesome'"></bar-rating>
+              </div>
+            </div>
+            <div class="d-lg-flex align-items-center">
+              <p class="user-name text-dark">Clyde Parker :</p>
+              <p class="review-text d-block">The brand apple is original also the iphone !!</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="preview-image">
+            <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="profile image">
+          </div>
+          <div class="content">
+            <div class="d-lg-flex align-items-center">
+              <h6 class="product-name text-dark">Imac</h6>
+              <small class="time ml-3 d-none d-sm-block">10.00 AM</small>
+              <div class="ml-auto">
+                <bar-rating [(rate)]="rating5" [max]="5" [theme]="'fontawesome'"></bar-rating>
+              </div>
+            </div>
+            <div class="d-lg-flex align-items-center">
+              <p class="user-name text-dark">James Tate :</p>
+              <p class="review-text d-block">The brand apple is original.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 grid-margin stretch-card">
+    <div class="row flex-grow w-100">
+      <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Traffic source</h4>
+            <div class="row">
+              <div class="col-xl-6 aligner-wrapper mb-4 mb-md-0">
+                <canvas baseChart [chartType]="'doughnut'" height="144" width="173" [datasets]="trafficSourceData" [labels]="trafficSourceLabels" [options]="trafficSourceOptions" [colors]="trafficSourceColors"></canvas>
+                <div class="wrapper d-flex flex-column justify-content-center absolute absolute-center">
+                  <h4 class="text-center mb-0">60%</h4>
+                </div>
+              </div>
+              <div class="col-xl-6 legend-wrapper">
+                <div class="d-flex mb-3">
+                  <div class="dot-indicator bg-secondary mt-1 mr-2"></div>
+                  <div class="d-flex flex-column justify-content-center">
+                    <p class="mb-0">Google</p>
+                    <small class="text-muted">67,342 (78.05%)</small>
+                  </div>
+                </div>
+                <div class="d-flex my-3">
+                  <div class="dot-indicator bg-success mt-1 mr-2"></div>
+                  <div class="d-flex flex-column justify-content-center">
+                    <p class="mb-0">Yahoo</p>
+                    <small class="text-muted">67,342 (78.05%)</small>
+                  </div>
+                </div>
+                <div class="d-flex mt-3">
+                  <div class="dot-indicator bg-danger mt-1 mr-2"></div>
+                  <div class="d-flex flex-column justify-content-center">
+                    <p class="mb-0">Bing</p>
+                    <small class="text-muted">67,342 (78.05%)</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Storage Space</h4>
+            <small class="text-muted">Used space</small>
+            <h4 class="text-dark">45.670/50.000</h4>
+            <div class="progress grouped">
+              <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="d-flex justify-content-between border-top mt-4 pt-4">
+              <div class="d-flex">
+                <div class="dot-indicator bg-primary mt-1 mr-2"></div>
+                <div class="d-flex flex-column">
+                  <p class="mb-0">Documents</p>
+                  <small class="text-dark">18.00 GB</small>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="dot-indicator bg-success mt-1 mr-2"></div>
+                <div class="d-flex flex-column">
+                  <p class="mb-0">Images</p>
+                  <small class="text-dark">10.00 GB</small>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="dot-indicator bg-danger mt-1 mr-2"></div>
+                <div class="d-flex flex-column">
+                  <p class="mb-0">Mail</p>
+                  <small class=" text-dark">02.00 GB</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 col-lg-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <h4 class="card-title">Activity</h4>
+          <i class="mdi mdi-dots-vertical"></i>
+        </div>
+        <p class="card-description">What's people doing right now</p>
+        <div class="list d-xl-flex align-items-center border-bottom py-3">
+          <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="">
+          <div class="wrapper w-100  ml-0 ml-xl-3">
+            <p class="mb-0 text-dark">
+              <b>Dobrick </b>posted in Material</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center">
+                <i class="mdi mdi-clock text-muted mr-1"></i>
+                <p class="mb-0">That's awesome!</p>
+              </div>
+              <small class="text-muted ml-auto">2 hours ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="list d-xl-flex align-items-center border-bottom py-3">
+          <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="">
+          <div class="wrapper w-100  ml-0 ml-xl-3">
+            <p class="mb-0 text-dark">
+              <b>Stella </b>posted in Material</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center">
+                <i class="mdi mdi-clock text-muted mr-1"></i>
+                <p class="mb-0">That's awesome!</p>
+              </div>
+              <small class="text-muted ml-auto">3 hours ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="list d-xl-flex align-items-center border-bottom py-3">
+          <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="">
+          <div class="wrapper w-100  ml-0 ml-xl-3">
+            <p class="mb-0 text-dark">
+              <b>Peter </b>posted in Material</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center">
+                <i class="mdi mdi-clock text-muted mr-1"></i>
+                <p class="mb-0">That's Great!</p>
+              </div>
+              <small class="text-muted ml-auto">1 hours ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="list d-xl-flex align-items-center pt-3">
+          <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="">
+          <div class="wrapper w-100  ml-0 ml-xl-3">
+            <p class="mb-0 text-dark">
+              <b>Nateila </b>posted in Material</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center">
+                <i class="mdi mdi-clock text-muted mr-1"></i>
+                <p class="mb-0">That's awesome!</p>
+              </div>
+              <small class="text-muted ml-auto">1 hours ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 col-lg-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Recomended</h4>
+        <div class="wrapper d-flex align-items-center py-2 border-bottom">
+          <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="profile">
+          <div class="wrapper ml-3">
+            <h6 class="ml-1 mb-1 text-dark">Stella Davidson</h6>
+            <small class="text-muted mb-0">
+              <i class="mdi mdi-map-marker-outline mr-1"></i>New York City, USA</small>
+          </div>
+          <div class="badge badge-pill badge-success ml-auto px-1 py-1">
+            <i class="mdi mdi-check"></i>
+          </div>
+        </div>
+        <div class="wrapper d-flex align-items-center py-2 border-bottom">
+          <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="profile">
+          <div class="wrapper ml-3">
+            <h6 class="ml-1 mb-1 text-dark">Daniel Russel</h6>
+            <small class="text-muted mb-0">
+              <i class="mdi mdi-map-marker-outline mr-1"></i>Florida, USA</small>
+          </div>
+          <div class="badge badge-pill badge-success ml-auto px-1 py-1">
+            <i class="mdi mdi-plus"></i>
+          </div>
+        </div>
+        <div class="wrapper d-flex align-items-center py-2 border-bottom">
+          <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="profile">
+          <div class="wrapper ml-3">
+            <h6 class="ml-1 mb-1 text-dark">Bruno King</h6>
+            <small class="text-muted mb-0">
+              <i class="mdi mdi-map-marker-outline mr-1"></i>Arkansas, USA</small>
+          </div>
+          <div class="badge badge-pill badge-success ml-auto px-1 py-1">
+            <i class="mdi mdi-check"></i>
+          </div>
+        </div>
+        <div class="wrapper d-flex align-items-center py-2 border-bottom">
+          <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="profile">
+          <div class="wrapper ml-3">
+            <h6 class="ml-1 mb-1 text-dark">David Moore</h6>
+            <small class="text-muted mb-0">
+              <i class="mdi mdi-map-marker-outline mr-1"></i>Arizon, USA</small>
+          </div>
+          <div class="badge badge-pill badge-success ml-auto px-1 py-1">
+            <i class="mdi mdi-plus"></i>
+          </div>
+        </div>
+        <div class="wrapper d-flex align-items-center pt-2">
+          <img class="img-sm rounded-circle" src="https://via.placeholder.com/86x86" alt="profile">
+          <div class="wrapper ml-3">
+            <h6 class="ml-1 mb-1 text-dark">Rafell John</h6>
+            <small class="text-muted mb-0">
+              <i class="mdi mdi-map-marker-outline mr-1"></i>Alaska, USA</small>
+          </div>
+          <div class="badge badge-pill badge-success ml-auto px-1 py-1">
+            <i class="mdi mdi-plus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-lg-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Updates</h4>
+        <ul class="bullet-line-list">
+          <li>
+            <h6 class="text-dark">User confirmation</h6>
+            <p>Lorem Ipsum is simply dummy text of the printing</p>
+            <p class="text-muted">
+              <i class="mdi mdi-clock"></i> 7 months ago.</p>
+          </li>
+          <li>
+            <h6 class="text-dark">Continuous evaluation</h6>
+            <p>Lorem Ipsum is simply dummy text of the printing</p>
+            <p class="text-muted">
+              <i class="mdi mdi-clock"></i> 7 months ago.</p>
+          </li>
+          <li>
+            <h6 class="text-dark">Promotion</h6>
+            <p>Lorem Ipsum is simply dummy text of the printing</p>
+            <p class="text-muted">
+              <i class="mdi mdi-clock"></i> 7 months ago.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

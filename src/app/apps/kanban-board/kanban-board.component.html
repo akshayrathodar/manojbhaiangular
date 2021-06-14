@@ -1,0 +1,223 @@
+<div class="page-header">
+    <h3 class="page-title">
+      Kanban board
+    </h3>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:;">Apps</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Kanban board</li>
+      </ol>
+    </nav>
+  </div>
+  <div class="row">
+    <div class="col-12 grid-margin">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 h-100">
+              <div class="board-wrapper">
+                  <div class="board-portlet">
+                    <h4 class="portlet-heading text-dark">Todo</h4>
+                    <p class="task-number">4 Tasks</p>
+                    <ul id="portlet-card-list-1" class="portlet-card-list ui-sortable" dragula="portlet-card-list">
+                      
+                      <li class="portlet-card ui-sortable-handle">
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 63%" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="task-date">20 Feb 2019</p>
+                        <div class="action-dropdown dropdown" ngbDropdown placement="left-top">
+                          <button type="button" class="dropdown-toggle" ngbDropdownToggle id="portlet-action-dropdown_2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-dots-vertical"></i>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right"ngbDropdownMenu aria-labelledby="portlet-action-dropdown_2">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Delete</a>
+                          </div>
+                        </div>
+                        <h4 class="task-title text-dark">Server gateway</h4>
+                      </li>
+                      <li class="portlet-card ui-sortable-handle" style="position: relative; left: 0px; top: 0px;">
+                        <div class="progress">
+                          <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="task-date">20 Feb 2019</p>
+                        <div class="action-dropdown dropdown" ngbDropdown placement="left-top">
+                          <button type="button" class="dropdown-toggle" ngbDropdownToggle id="portlet-action-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-dots-vertical"></i>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="portlet-action-dropdown">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Delete</a>
+                          </div>
+                        </div>
+                        <h4 class="task-title text-dark">Server gateway</h4>
+                        <div class="image-grouped">
+                          <img src="https://via.placeholder.com/86x86" alt="profile image">
+                          <img src="https://via.placeholder.com/86x86" alt="profile image">
+                          <img src="https://via.placeholder.com/86x86" alt="profile image">
+                        </div>
+                        <div class="badge badge-inverse-success">important</div>
+                        <p class="due-date">Due 10 days</p>
+                      </li><li class="portlet-card ui-sortable-handle">
+                        <div class="progress">
+                          <div class="progress-bar bg-danger" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="task-date">24 Feb 2019</p>
+                        <div class="action-dropdown dropdown" ngbDropdown placement="left-top">
+                          <button type="button" class="dropdown-toggle" ngbDropdownToggle id="portlet-action-dropdown_3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-dots-vertical"></i>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="portlet-action-dropdown_3">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Delete</a>
+                          </div>
+                        </div>
+                        <h4 class="task-title text-dark">Software update</h4>
+                      </li>
+                      <li class="portlet-card ui-sortable-handle">
+                        <div class="progress">
+                          <div class="progress-bar bg-success" role="progressbar" style="width: 54%" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="task-date">26 Feb 2019</p>
+                        <div class="action-dropdown dropdown" ngbDropdown placement="left-top">
+                          <button type="button" class="dropdown-toggle" ngbDropdownToggle id="portlet-action-dropdown_4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-dots-vertical"></i>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="portlet-action-dropdown_4">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Delete</a>
+                          </div>
+                        </div>
+                        <h4 class="task-title text-dark">Network maintenance</h4>
+                      </li>
+                    </ul>
+                    <button type="button" class="add-portlet">+ add new card</button>
+                  </div>
+              </div>
+            </div> 
+            <div class="col-md-4 h-100">
+              <div class="board-wrapper">
+                <div class="board-portlet">
+                  <h4 class="portlet-heading text-dark">In progress</h4>
+                  <p class="task-number">4 Tasks</p>
+                  <ul id="portlet-card-list-2" class="portlet-card-list ui-sortable" dragula="portlet-card-list">
+                    <li class="portlet-card ui-sortable-handle">
+                      <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="task-date">18 Apr 2019</p>
+                      <div class="action-dropdown dropdown" ngbDropdown placement="left-top">
+                        <button type="button" class="dropdown-toggle" ngbDropdownToggle id="portlet-action-dropdown_8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="mdi mdi-dots-vertical"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="portlet-action-dropdown_8">
+                          <a class="dropdown-item" href="#">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      <h4 class="task-title text-dark">Attached Preview Icon</h4>
+                    </li>
+                    <li class="portlet-card ui-sortable-handle">
+                      <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 24%" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="task-date">20 Feb 2019</p>
+                      <div class="action-dropdown dropdown" ngbDropdown placement="left-top">
+                        <button type="button" class="dropdown-toggle" id="portlet-action-dropdown-6" ngbDropdownToggle data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="mdi mdi-dots-vertical"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="portlet-action-dropdown-6">
+                          <a class="dropdown-item" href="#">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      <h4 class="task-title text-dark">UI Design Started</h4>
+                      <div class="image-grouped">
+                        <img src="https://via.placeholder.com/86x86" alt="profile image">
+                        <img src="https://via.placeholder.com/86x86" alt="profile image">
+                        <img src="https://via.placeholder.com/86x86" alt="profile image">
+                      </div>
+                      <div class="badge badge-inverse-success">important</div>
+                      <p class="due-date">Due 10 days</p>
+                    </li>
+                    <li class="portlet-card ui-sortable-handle">
+                      <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="task-date">13 Mar 2019</p>
+                      <div class="action-dropdown dropdown" ngbDropdown placement="left-top">
+                        <button type="button" class="dropdown-toggle" id="portlet-action-dropdown-7" ngbDropdownToggle data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="mdi mdi-dots-vertical"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="portlet-action-dropdown-7">
+                          <a class="dropdown-item" href="#">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      <h4 class="task-title text-dark">New IOS Design</h4>
+                      <div class="badge badge-inverse-primary">important</div>
+                    </li>
+                  </ul>
+                  <button type="button" class="add-portlet">+ add new card</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 h-100">
+              <div class="board-wrapper">
+                <div class="board-portlet">
+                  <h4 class="portlet-heading text-dark">On Hold</h4>
+                  <p class="task-number">4 Tasks</p>
+                  <ul id="portlet-card-list-3" class="portlet-card-list ui-sortable" dragula="portlet-card-list">
+                    <li class="portlet-card ui-sortable-handle">
+                      <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 63%" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="task-date">20 Feb 2019</p>
+                      <div class="action-dropdown dropdown" ngbDropdown placement="left-top">
+                        <button type="button" class="dropdown-toggle" id="portlet-action-dropdown_8" ngbDropdownToggle data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="mdi mdi-dots-vertical"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="portlet-action-dropdown_8">
+                          <a class="dropdown-item" href="#">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      <h4 class="task-title text-dark">Retail Order</h4>
+                      <div class="image-grouped">
+                        <img src="https://via.placeholder.com/86x86" alt="profile image">
+                        <img src="https://via.placeholder.com/86x86" alt="profile image">
+                        <img src="https://via.placeholder.com/86x86" alt="profile image">
+                      </div>
+                      <div class="badge badge-inverse-warning">important</div>
+                      <p class="due-date">Due 10 days</p>
+                    </li>
+                    <li class="portlet-card ui-sortable-handle">
+                      <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p class="task-date">12 Jan 2019</p>
+                      <div class="action-dropdown dropdown" ngbDropdown placement="left-top">
+                        <button type="button" class="dropdown-toggle" id="portlet-action-dropdown_9" ngbDropdownToggle data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="mdi mdi-dots-vertical"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="portlet-action-dropdown_9">
+                          <a class="dropdown-item" href="#">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      <h4 class="task-title text-dark">HTML/CSS templates</h4>
+                      <img class="portlet-image" src="https://via.placeholder.com/100x100" alt="">
+                      <div class="badge badge-inverse-warning">important</div>
+                      <p class="due-date">Due 10 days</p>
+                    </li>
+                  </ul>
+                  <button type="button" class="add-portlet">+ add new card</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

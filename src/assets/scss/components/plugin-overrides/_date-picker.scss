@@ -1,0 +1,102 @@
+// angular2-datetimepicker
+
+angular2-date-picker {
+  .winkel-calendar {
+      .wc-date-container {
+          background: $input-bg;
+          height: 33.5px;
+          border: 1px solid $border-color;
+          padding: 7px 15px;
+          span {
+              @extend .text-muted;
+          }
+          > i {
+              @extend .text-muted;
+              font-size: 16px;
+          }
+      }
+      .wc-date-popover {
+          width: auto;
+          .wc-banner,
+          .wc-details,
+          .year-title {
+              background: theme-color(primary);
+          }
+
+    @media(max-width: 992px) { 
+        .wc-date-row {
+            font-size: 2rem;
+            width: 100%;
+            text-align: center;
+        }
+        .wc-month-row {
+            font-size: 1.5rem;
+            padding-top: 0;
+            text-align: center;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .wc-my-sec {
+            font-size: 2rem;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .wc-year-row {
+            width: auto;
+            text-align: center;
+            font-size: 1.5rem;
+            margin-left: 1.5rem;
+        }
+        .wc-prev,
+        .wc-next {
+            font-size: 1rem;
+        }
+        .month-year {
+            font-size: 1rem;
+            line-height: 1;
+        }
+        .year-title {
+            font-size: 1rem;
+            line-height: 1;
+            padding-bottom: 10px;
+            padding-top: 3px;
+            i {
+                font-size: 1rem;
+                padding-top: 0;
+            }
+        }
+    }
+          .calendar-days {
+            color: $body-color;
+              tr {
+                  td {
+                      &.selected-day {
+                          > span {
+                              background: theme-color(primary);
+                          }
+                      }
+                      &:hover {
+                          > span {
+                              background: theme-color(primary);
+                          }
+                      }
+                      &.today {
+                          > span {
+                              border: 1px solid theme-color(primary);
+                          }
+                      }
+                  }
+              }
+          }
+          .cal-util {
+            .ok {
+              color: theme-color(primary);
+            }
+          }
+      }
+      
+  }
+}
