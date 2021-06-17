@@ -35,6 +35,7 @@ import { MorrisJsModule } from 'angular-morris-js';
 import { BarRatingModule } from "ngx-bar-rating";
 import { LoginComponent } from './login/login.component';
 
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/');
 }

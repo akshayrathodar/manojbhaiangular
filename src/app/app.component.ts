@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
+import { CommonService } from './Service/common.service';
+//import { Loginstatus } from './Service/common.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,8 +17,9 @@ export class AppComponent implements OnInit{
   showSettings: boolean = true;
   isLoading: boolean;
   
+  
 
-  constructor(private router: Router, translate: TranslateService) {
+  constructor(private router: Router, translate: TranslateService,public cs:CommonService) {
     
     // Removing Sidebar, Navbar, Footer for Documentation, Error and Auth pages
     router.events.forEach((event) => { 

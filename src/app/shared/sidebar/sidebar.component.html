@@ -8,7 +8,7 @@
         </div>
         <div class="profile-name">
           <p class="name">
-            Marina Michel
+            Manoj
           </p>
           <p class="designation">
             Super Admin
@@ -23,41 +23,68 @@
         <span class="badge badge-success">New</span>
       </a>
     </li>
-    <li class="nav-item" [ngClass]="{ 'active': widgets.isActive }">
+    <li class="nav-item" [ngClass]="{'active': widgets.isActive }">
       <a class="nav-link" routerLink="widgets/widgets" routerLinkActive #widgets="routerLinkActive">
-        <i class="icon-handbag menu-icon"></i>
-        <span class="menu-title" translate>Widgets</span>
+        <i class="icon-user menu-icon"></i>
+        <span class="menu-title" translate>Users</span>
       </a>
     </li>
-    <li class="nav-item" [ngClass]="{ 'active' : layout.isActive }">
+    <!-- <li class="nav-item" [ngClass]="{ 'active' : layout.isActive }">
       <a class="nav-link" routerLink="layout/rtl-layout" routerLinkActive #layout="routerLinkActive">
         <i class="icon-check menu-icon"></i>
         <span class="menu-title" translate>RTL</span>
       </a> 
-    </li>
-    <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive || breadcrumbs.isActive || dropdowns.isActive || modals.isActive || progressbar.isActive || pagination.isActive || tabs.isActive || typography.isActive || tooltips.isActive }">
+    </li> -->
+    <!-- <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive || breadcrumbs.isActive || dropdowns.isActive || modals.isActive || progressbar.isActive || pagination.isActive || tabs.isActive || typography.isActive || tooltips.isActive }"></li> -->
+    <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive }">
       <a class="nav-link" (click)="uiBasicCollapsed = !uiBasicCollapsed" [attr.aria-expanded]="uiBasicCollapsed" aria-controls="ui-basic">
-        <i class="icon-target menu-icon"></i>
-        <span class="menu-title" translate>UI Elements</span>
-        <span class="badge badge-success">10</span>
+        <i class="icon-trophy menu-icon"></i>
+        <span class="menu-title" translate>Series</span>
+        <span class="badge badge-success">3</span>
       </a>
       <div class="collapse" id="ui-basic" [ngbCollapse]="!uiBasicCollapsed">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive" translate>Accordions</a></li>
-          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive" translate>Buttons</a></li>
-          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive" translate>Badges</a></li>
-          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/breadcrumbs" routerLinkActive="active" #breadcrumbs="routerLinkActive" translate>Breadcrumbs</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive" translate>Upcoming Matches</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive" translate>Live Matches</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive" translate>Completed Matches</a></li>
+          <!-- <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/breadcrumbs" routerLinkActive="active" #breadcrumbs="routerLinkActive" translate>Breadcrumbs</a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/dropdowns" routerLinkActive="active" #dropdowns="routerLinkActive" translate>Dropdowns</a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/modals" routerLinkActive="active" #modals="routerLinkActive" translate>Modals</a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/progressbar" routerLinkActive="active" #progressbar="routerLinkActive" translate>Progress bar</a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/pagination" routerLinkActive="active" #pagination="routerLinkActive" translate>Pagination</a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/tabs" routerLinkActive="active" #tabs="routerLinkActive" translate>Tabs</a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/typography" routerLinkActive="active" #typography="routerLinkActive" translate>Typography</a></li>
-          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/tooltips" routerLinkActive="active" #tooltips="routerLinkActive" translate>Tooltips</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/tooltips" routerLinkActive="active" #tooltips="routerLinkActive" translate>Tooltips</a></li> -->
         </ul>
       </div>
     </li>
-    <li class="nav-item" [ngClass]="{ 'active' : dragula.isActive || clipboard.isActive || contextMenu.isActive || slider.isActive || carousel.isActive || loaders.isActive }">
+    
+    <li class="nav-item" [ngClass]="{ 'active' : layout.isActive }">
+      <a class="nav-link" routerLink="contest/contest" routerLinkActive #layout="routerLinkActive">
+        <i class="icon-trophy menu-icon"></i>
+        <span class="menu-title" translate>Default Contest</span>
+      </a> 
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active' : layout.isActive }">
+      <a class="nav-link" routerLink="widgets/widgets" routerLinkActive #layout="routerLinkActive">
+        <i class="icon-layers menu-icon"></i>
+        <span class="menu-title" translate>Contest Type</span>
+      </a> 
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active' : layout.isActive }">
+      <a class="nav-link" routerLink="widgets/widgets" routerLinkActive #layout="routerLinkActive">
+        <i class="icon-docs menu-icon"></i>
+        <span class="menu-title" translate>Docuement Verification</span>
+      </a> 
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active' : layout.isActive }">
+      <a class="nav-link" routerLink="widgets/widgets" routerLinkActive #layout="routerLinkActive">
+        <i class="icon-notebook menu-icon"></i>
+        <span class="menu-title" translate>Transaction History</span>
+      </a> 
+    </li>
+
+    <!-- <li class="nav-item" [ngClass]="{ 'active' : dragula.isActive || clipboard.isActive || contextMenu.isActive || slider.isActive || carousel.isActive || loaders.isActive }">
       <a class="nav-link" (click)="uiAdvancedCollapsed = !uiAdvancedCollapsed" [attr.aria-expanded]="uiAdvancedCollapsed" aria-controls="ui-advanced">
         <i class="icon-cup menu-icon"></i>
         <span class="menu-title" translate>Advanced UI</span>
@@ -273,6 +300,6 @@
         <i class="icon-magnet menu-icon"></i>
         <span class="menu-title" translate>Documentation</span>
       </a>
-    </li>
+    </li> -->
   </ul>
 </nav>
