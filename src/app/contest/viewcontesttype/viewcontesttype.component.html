@@ -1,0 +1,51 @@
+<div class="page-header" >
+  <h3 class="page-title">
+    Contest Type
+  </h3>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="javascript:;">contesttype</a></li>
+      <li class="breadcrumb-item active" aria-current="page">View Contesttype</li>
+    </ol>
+  </nav>
+</div>
+<div class="card" *ngIf="!editSection">
+  <div class="card-body">
+    <h4 class="card-title">Contest Types</h4>
+    <div class="row">
+      <div class="col-12">
+        <div class="table-responsive">
+          <table datatable class="table" [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+            <thead>
+              <tr>
+                  
+                  <th>Type Name</th>
+                  <th>Description</th>
+                  <th>Max Entry</th>
+                  <th>Sort By</th>
+         		  <th>Operations</th>
+              </tr>
+            </thead>
+            <tbody >
+            	<tr *ngFor="let row of data">
+                  <td>{{row.type_name}}</td>
+                  <td>{{row.description}}</td>
+                  <td>{{row.max_entry}}</td>
+                  <td>{{row.sort_by}}</td>
+         		  <td><button class="btn btn-outline-primary" (click)="editForm()">Edit</button><button class="btn btn-outline-primary" (click)="deleteRecord(row._id)">Delete</button></td>
+
+              	</tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card" *ngIf="editSection">
+	 <div class="card-body">
+	 	<h1>Edited</h1>
+	 </div>
+	
+</div>

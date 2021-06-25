@@ -44,9 +44,9 @@
       </a>
       <div class="collapse" id="ui-basic" [ngbCollapse]="!uiBasicCollapsed">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive" translate>Upcoming Matches</a></li>
-          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive" translate>Live Matches</a></li>
-          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive" translate>Completed Matches</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="matches/upcomingmatches" routerLinkActive="active" #accordions="routerLinkActive" translate>Upcoming Matches</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="matches/livematches" routerLinkActive="active" #buttons="routerLinkActive" translate>Live Matches</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="matches/completedmatches" routerLinkActive="active" #badges="routerLinkActive" translate>Completed Matches</a></li>
           <!-- <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/breadcrumbs" routerLinkActive="active" #breadcrumbs="routerLinkActive" translate>Breadcrumbs</a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/dropdowns" routerLinkActive="active" #dropdowns="routerLinkActive" translate>Dropdowns</a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/modals" routerLinkActive="active" #modals="routerLinkActive" translate>Modals</a></li>
@@ -59,12 +59,58 @@
       </div>
     </li>
     
-    <li class="nav-item" [ngClass]="{ 'active' : layout.isActive }">
+    <!-- <li class="nav-item" [ngClass]="{ 'active' : layout.isActive }">
       <a class="nav-link" routerLink="contest/contest" routerLinkActive #layout="routerLinkActive">
         <i class="icon-trophy menu-icon"></i>
         <span class="menu-title" translate>Default Contest</span>
       </a> 
+    </li> -->
+
+    <li class="nav-item" [ngClass]="{'active' : createdefaultcontesttype.isActive || viewdefaultcontesttype.isActive }">
+      <a class="nav-link" (click)="defaultcontesttypeCollapsed = !defaultcontesttypeCollapsed" [attr.aria-expanded]="defaultcontesttypeCollapsed" aria-controls="defaultcontesttype">
+        <i class="icon-trophy menu-icon"></i>
+        <span class="menu-title" translate>Default Contest</span>
+        <span class="badge badge-success">2</span>
+      </a>
+      <div class="collapse" id="defaultcontesttype" [ngbCollapse]="!defaultcontesttypeCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="defaultcontest/view" routerLinkActive="active" #createdefaultcontesttype="routerLinkActive" translate>View Default Contest Type</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="defaultcontest/create" routerLinkActive="active" #viewdefaultcontesttype="routerLinkActive" translate>Create Default Contest Type</a></li>
+          <!-- <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/breadcrumbs" routerLinkActive="active" #breadcrumbs="routerLinkActive" translate>Breadcrumbs</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/dropdowns" routerLinkActive="active" #dropdowns="routerLinkActive" translate>Dropdowns</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/modals" routerLinkActive="active" #modals="routerLinkActive" translate>Modals</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/progressbar" routerLinkActive="active" #progressbar="routerLinkActive" translate>Progress bar</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/pagination" routerLinkActive="active" #pagination="routerLinkActive" translate>Pagination</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/tabs" routerLinkActive="active" #tabs="routerLinkActive" translate>Tabs</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/typography" routerLinkActive="active" #typography="routerLinkActive" translate>Typography</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/tooltips" routerLinkActive="active" #tooltips="routerLinkActive" translate>Tooltips</a></li> -->
+        </ul>
+      </div>
     </li>
+
+    
+    <li class="nav-item" [ngClass]="{'active' : createcontesttype.isActive || viewcontesttype.isActive }">
+      <a class="nav-link" (click)="contesttypeCollapsed = !contesttypeCollapsed" [attr.aria-expanded]="contesttypeCollapsed" aria-controls="contesttype">
+        <i class="icon-trophy menu-icon"></i>
+        <span class="menu-title" translate>Contest Types</span>
+        <span class="badge badge-success">2</span>
+      </a>
+      <div class="collapse" id="contesttype" [ngbCollapse]="!contesttypeCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="contest/viewcontesttype" routerLinkActive="active" #createcontesttype="routerLinkActive" translate>View Contest Type</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="contest/contest" routerLinkActive="active" #viewcontesttype="routerLinkActive" translate>Create Contest Type</a></li>
+          <!-- <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/breadcrumbs" routerLinkActive="active" #breadcrumbs="routerLinkActive" translate>Breadcrumbs</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/dropdowns" routerLinkActive="active" #dropdowns="routerLinkActive" translate>Dropdowns</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/modals" routerLinkActive="active" #modals="routerLinkActive" translate>Modals</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/progressbar" routerLinkActive="active" #progressbar="routerLinkActive" translate>Progress bar</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/pagination" routerLinkActive="active" #pagination="routerLinkActive" translate>Pagination</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/tabs" routerLinkActive="active" #tabs="routerLinkActive" translate>Tabs</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/typography" routerLinkActive="active" #typography="routerLinkActive" translate>Typography</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/tooltips" routerLinkActive="active" #tooltips="routerLinkActive" translate>Tooltips</a></li> -->
+        </ul>
+      </div>
+    </li>
+
     <li class="nav-item" [ngClass]="{ 'active' : layout.isActive }">
       <a class="nav-link" routerLink="widgets/widgets" routerLinkActive #layout="routerLinkActive">
         <i class="icon-layers menu-icon"></i>
@@ -142,7 +188,7 @@
           <li class="nav-item"> <a class="nav-link" routerLink="charts/chartist" routerLinkActive="active" #chartist="routerLinkActive" translate>Chartist</a></li>
         </ul>
       </div>
-    </li>
+    </li> -->
     <li class="nav-item" [ngClass]="{ 'active' : basicTable.isActive || dataTable.isActive }">
       <a class="nav-link" (click)="tablesCollapsed = !tablesCollapsed" [attr.aria-expanded]="tablesCollapsed" aria-controls="tables">
         <i class="icon-grid menu-icon"></i>
@@ -156,7 +202,7 @@
         </ul>
       </div> 
     </li>
-    <li class="nav-item" [ngClass]="{ 'active' : googleMaps.isActive }">
+    <!-- <li class="nav-item" [ngClass]="{ 'active' : googleMaps.isActive }">
       <a class="nav-link" (click)="mapsCollapsed = !mapsCollapsed" [attr.aria-expanded]="mapsCollapsed" aria-controls="maps">
         <i class="icon-location-pin menu-icon"></i>
         <span class="menu-title" translate>Maps</span>

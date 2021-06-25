@@ -1,0 +1,61 @@
+<div class="page-header" >
+    <h3 class="page-title">
+      Matches
+    </h3>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:;">Matches</a></li>
+        <li class="breadcrumb-item active" aria-current="page">upcomingmatches</li>
+      </ol>
+    </nav>
+  </div>
+  <div class="card" *ngIf="!editSection">
+    <div class="card-body">
+      <h4 class="card-title">Upcoming Matches</h4>
+      <div class="row">
+        <div class="col-12">
+          <div class="table-responsive">
+            <table datatable class="table" [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+              <thead>
+                <tr>
+                    
+                    <th>Match id</th>
+                    <th>Title</th>
+                    <th>Short title</th>
+                    <th>Subtitle</th>
+                    <th>Status</th>
+                    <th>Date Start</th>
+                    <th>Date End</th>
+                    <th>Verified</th>
+                    <th>Pre Squard</th>
+                     <th>Operations</th>
+                </tr>
+              </thead>
+              <tbody >
+                  <tr *ngFor="let row of data">
+                    <td>{{row.match_id}}</td>
+                    <td>{{row.title}}</td>
+                    <td>{{row.short_title}}</td>
+                    <td>{{row.subtitle}}</td>
+                    <td>{{row.status_str}}</td>
+                    <td>{{row.date_start}}</td>
+                    <td>{{row.date_end}}</td>
+                    <td>{{row.verified}}</td>
+                    <td>{{row.pre_squard}}</td>
+                     <td><button class="btn btn-outline-primary" (click)="editForm()">Edit</button><button class="btn btn-outline-primary" (click)="deleteRecord()">Delete</button></td>
+  
+                    </tr>
+  
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" *ngIf="editSection">
+       <div class="card-body">
+           <h1>Edited</h1>
+       </div>
+      
+  </div>

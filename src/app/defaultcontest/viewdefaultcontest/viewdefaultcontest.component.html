@@ -1,0 +1,55 @@
+<div class="page-header" >
+  <h3 class="page-title">
+    Default Type
+  </h3>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="javascript:;">Defaultcontesttype</a></li>
+      <li class="breadcrumb-item active" aria-current="page">View DefaultContesttype</li>
+    </ol>
+  </nav>
+</div>
+<div class="card" *ngIf="!editSection">
+  <div class="card-body">
+    <h4 class="card-title">Default Contest Types</h4>
+    <div class="row">
+      <div class="col-12">
+        <div class="table-responsive">
+          <table datatable class="table" [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+            <thead>
+              <tr>
+                  
+                  <th>Contest Type Id</th>
+                  <th>Winner Price</th>
+                  <th>Usable Bonus</th>
+                  <th>Entry Fees</th>
+         		  <th>Total Winner</th>
+         		  <th>Total Spots</th>
+         		  <th>Operations</th>
+              </tr>
+            </thead>
+            <tbody >
+            	<tr *ngFor="let row of data">
+                  <td>{{row.contest_type_id}}</td>
+                  <td>{{row.total_winner_price}}</td>
+                  <td>{{row.total_usable_bonus}}</td>
+                  <td>{{row.entry_fees}}</td>
+                  <td>{{row.total_winner}}</td>
+                  <td>{{row.total_spots}}</td>
+         		  <td><button class="btn btn-outline-primary" (click)="editForm()">Edit</button><button class="btn btn-outline-primary" (click)="deleteRecord(row._id)">Delete</button></td>
+
+              	</tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card" *ngIf="editSection">
+	 <div class="card-body">
+	 	<h1>Edited</h1>
+	 </div>
+	
+</div>

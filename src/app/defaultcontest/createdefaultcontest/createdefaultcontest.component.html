@@ -1,0 +1,98 @@
+<div class="page-header">
+    <h3 class="page-title">
+      Create Default Contest
+    </h3>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:;">Default Contest</a></li>
+        <li class="breadcrumb-item active" aria-current="page">defaultcontest</li>
+      </ol>
+    </nav>
+</div>
+<div class="row">
+  <div class="col-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Default Contest form</h4>
+      
+        <form [formGroup]="contestForm" class="forms-sample" (ngSubmit)="onsubmit()">
+          <div class="form-group">
+          	<label for="exampleInputName1">Contest Types :</label>
+          	<select class="form-control" formControlName="contest_type_id">
+          		<option *ngFor="let item of dropdowndata" [value]="item._id">{{item.type_name}}</option>
+          	</select>
+          	<div *ngIf="submitted && f.contest_type_id">
+              Contest Type is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName1">Entry Fees</label>
+            <input type="text" class="form-control" formControlName="entry_fees" placeholder="entry_fees" >
+              <div *ngIf="submitted && f.entry_fees.errors">
+              Entry Fees is required.
+               </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleTextarea1">Discounted Entry Fees</label>
+            <input type="text" class="form-control" formControlName="discountentry" placeholder="discountentry" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword4">Total Spots</label>
+            <input type="text" class="form-control"  placeholder="Max Entry" formControlName="totalspots">
+            
+              <div *ngIf="submitted && f.totalspots.errors">
+                Total Spots is required.
+            </div>
+          
+          </div>
+          <div class="form-group">
+            <label for="exampleInputCity1">Total Winner</label>
+            <input type="text" class="form-control" placeholder="Total Winner" formControlName="totalwinner">
+          
+              <div *ngIf="submitted && f.totalwinner.errors">
+                Total Winner is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <label >First Price</label>
+            <input type="text" class="form-control" placeholder="First Price" formControlName="firstprice">
+          
+              <div *ngIf="submitted && f.firstprice.errors">
+                First Price is required.
+            </div>
+          </div>
+          <div class="form-group">
+          	<label >Future Cancellation :</label> <br/>
+          	<label><input type="radio" formControlName="cancellation" value="true" />True</label> 
+  			<label><input type="radio" formControlName="cancellation" value="false" />False</label>
+            <div *ngIf="submitted && f.cancellation.errors">
+                Cancellation Input is required.
+            </div>
+
+          </div>
+		  <div class="form-group">
+            <label >Total Winner Price</label>
+            <input type="text" class="form-control" placeholder="Total Winner Price" formControlName="totalwinnerprice">
+          
+              <div *ngIf="submitted && f.totalwinnerprice.errors">
+                Total Winner Price is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <label >Total Usable Bonus</label>
+            <input type="text" class="form-control" placeholder="Total Usable Bonus" formControlName="totalusablebonus">
+          </div>
+          <div class="form-group">
+            <label >Coupon Code</label>
+            <input type="text" class="form-control" placeholder="Coupon Code" formControlName="couponcode">
+          </div>
+
+
+          <button type="submit" class="btn btn-primary mr-2">Submit</button>
+          <button class="btn btn-light">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

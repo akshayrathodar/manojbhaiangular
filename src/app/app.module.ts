@@ -36,6 +36,7 @@ import { BarRatingModule } from "ngx-bar-rating";
 import { LoginComponent } from './login/login.component';
 
 
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/');
 }
@@ -54,6 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SpinnerComponent,
     ContentAnimateDirective,
     LoginComponent,
+    
     // CarouselComponent
   ],
   imports: [

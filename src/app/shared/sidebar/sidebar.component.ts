@@ -9,6 +9,8 @@ import {TranslateService} from '@ngx-translate/core';
 export class SidebarComponent implements OnInit {
   public uiBasicCollapsed = false;
   public uiAdvancedCollapsed = false;
+  public contesttypeCollapsed = false;
+  public defaultcontesttypeCollapsed = false;
   public formsCollapsed = false;
   public editorsCollapsed = false;
   public chartsCollapsed = false;

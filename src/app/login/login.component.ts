@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 
 import { CommonService } from '../Service/common.service';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -21,6 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   gotoDash = function () {
+    
     let email = this.angForm.controls.email.value;
     let pass = this.angForm.controls.password.value;
     if(email != '' && pass != '') {
@@ -28,13 +31,13 @@ export class LoginComponent implements OnInit {
        this.cs.SubmiPostFormData('/api/v1/admin/login',fm).then((response) => {   
          console.log(response);  
          if(response.success == true) {
-           alert('success');
+          //  this.toastr.success('Login Success');
            this.cs.setLogin(true);
          } else {
-           
+          //  this.toastr.error('Login Failed');
          }
        }).catch((error) => {
-         console.log(error);
+        alert('Login Failed');
        });
     } else {
      alert('Email And Password are required!'); 

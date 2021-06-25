@@ -26,6 +26,15 @@ export class CommonService {
     .catch(this.handleError);
   }
 
+  public getDataFromUrl(url: string,options:any = '') : Promise<any> {
+    return this.http.get(this.Constant['API_END_POINT']+url).toPromise().then(this.extractData).catch(this.handleError);
+  }
+
+  public deleteDataById(url: string) : Promise<any> {
+    return this.http.delete(this.Constant['API_END_POINT']+url).toPromise().then(this.extractData).catch(this.handleError);
+  }
+
+
   private handleError (error: HttpErrorResponse) {		
     let errMsg = '';
     if (error.error instanceof Error) {
